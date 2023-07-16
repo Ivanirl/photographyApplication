@@ -1,0 +1,16 @@
+h1 {
+  font-size: 2em;
+  color: var(--Font-Color);
+}
+
+h2 {
+  font-size: 1.5em;
+  color: var(--Font-Color);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+}

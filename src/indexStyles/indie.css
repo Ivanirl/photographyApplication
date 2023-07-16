@@ -1,0 +1,331 @@
+@font-face {
+  font-family: Centra;
+  src: url(../Resources/font/CentraNo2-Bold.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Centra;
+  src: url(../Resources/font/CentraNo2-Medium.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: Centra;
+  src: url(../Resources/font/CentraNo2-Book.ttf);
+  font-weight: 300;
+}
+* {
+  font-family: "Centra", sans-serif !important;
+  box-sizing: border-box;
+  list-style: none;
+  color: aliceblue;
+}
+
+:root {
+  --Font-Color: #2c292b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  cursor: default;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: #0b021f;
+  font-weight: bold;
+  scroll-behavior: smooth;
+  transition: ease 0.2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: solid aliceblue 2px;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+button:hover {
+  opacity: 1;
+  color: black;
+  background: aliceblue;
+}
+button:active {
+  opacity: 1;
+  color: white;
+  background: none;
+}
+
+#scrollo {
+  background: linear-gradient(180deg, rgba(11, 2, 31, 0.94) 2.23%, rgba(11, 2, 31, 0.96) 22.35%, rgba(11, 2, 31, 0.96) 25.42%, rgba(11, 2, 31, 0.9) 47.75%, rgba(11, 2, 31, 0.84) 58.35%, rgba(11, 2, 31, 0.76) 65.61%, rgba(11, 2, 31, 0.34) 83.75%, rgba(11, 2, 31, 0) 92.13%);
+}
+
+#scrolled {
+  background: linear-gradient(180deg, rgba(11, 2, 31, 0.94) 2.23%, rgba(11, 2, 31, 0.96) 22.35%, rgba(11, 2, 31, 0.96) 25.42%, rgba(11, 2, 31, 0.9) 47.75%, rgba(11, 2, 31, 0.84) 58.35%, rgba(11, 2, 31, 0.76) 65.61%, rgba(11, 2, 31, 0.34) 83.75%, rgba(11, 2, 31, 0) 92.13%);
+}
+
+.navbar-link {
+  opacity: 0.7;
+}
+.navbar-link:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+  padding: 1.4px 2px;
+  border-bottom: solid 3px rgb(59, 51, 121);
+}
+
+.NavBar {
+  padding: 1em 3.1em;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+.NavBar .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2em;
+  padding-bottom: 1.1em;
+}
+.NavBar .container .rightboy {
+  display: flex;
+  justify-content: space-between;
+  gap: 13em;
+}
+.NavBar .container .rightboy .logo {
+  padding: 0;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.NavBar .container .rightboy .logo .logoimage {
+  width: 10em;
+}
+.NavBar .container .navigation {
+  display: flex;
+  gap: 8em;
+  font-weight: lighter;
+}
+.NavBar .container .getstarted {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  transition: ease-in-out 2s;
+}
+.NavBar .container .getstarted .seperator {
+  background-color: rgb(156, 156, 156);
+  width: 2px;
+  height: 31px;
+}
+.NavBar .container .getstarted .getStarted {
+  font-weight: lighter;
+  border: none;
+  transition: linear 0.2s;
+  opacity: 0.7;
+}
+.NavBar .container .getstarted .getStarted:hover {
+  opacity: 1;
+  color: aliceblue;
+  background: none;
+}
+
+.bigBody {
+  padding: 0;
+}
+
+.HomeContainer {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.HomeContainer .lefty {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.HomeContainer .lefty .Heroo {
+  font-weight: bolder;
+  cursor: default;
+  font-size: 7em;
+  width: 5.5em;
+  letter-spacing: -5px;
+  margin-bottom: 0;
+  line-height: 0.8em;
+  margin-bottom: 10px;
+  transition: ease 0.8s;
+}
+.HomeContainer .lefty .Heroo br {
+  margin: 0;
+}
+.HomeContainer .lefty span {
+  cursor: default;
+  font-weight: 200;
+}
+.HomeContainer .lefty .elsa {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 2em;
+}
+.HomeContainer .heroSection {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  padding: 2em 3em;
+  padding-top: 9em;
+}
+.HomeContainer .heroSection .lefty {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.HomeContainer .heroSection .lefty .Heroo {
+  font-weight: bolder;
+  cursor: default;
+  font-size: 7em;
+  width: 5.5em;
+  letter-spacing: -5px;
+  margin-bottom: 0;
+  line-height: 0.8em;
+  margin-bottom: 10px;
+  transition: ease 0.8s;
+}
+.HomeContainer .heroSection .lefty .Heroo br {
+  margin: 0;
+}
+.HomeContainer .heroSection .lefty span {
+  cursor: default;
+  font-weight: 200;
+}
+.HomeContainer .heroSection .lefty .elsa {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 2em;
+}
+.HomeContainer .heroSection .right {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 82em;
+  left: 0;
+  top: -2em;
+  z-index: -1000;
+  background-clip: border-box;
+  background-color: black;
+}
+.HomeContainer .heroSection .right .bigFace {
+  overflow: hidden;
+  position: absolute;
+  top: -7em;
+  width: 100%;
+  zoom: 1.7;
+  opacity: 0.5;
+}
+.HomeContainer .miniGal {
+  margin-top: 6.5em;
+  background: #0b021f;
+  padding: 8em 3em;
+  display: flex;
+}
+.HomeContainer .miniGal .right {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: 6em;
+}
+.HomeContainer .miniGal .right img {
+  width: 20em;
+  border-radius: 1px;
+  border: solid 3px white;
+  box-shadow: 0px 4.4171271324px 4.4171271324px 0px rgba(0, 0, 0, 0.25);
+}
+.HomeContainer .miniGal .right .picky {
+  position: absolute;
+  width: 25em;
+  right: 0;
+  top: -13em;
+}
+.HomeContainer .miniGal .right .stack {
+  display: flex;
+  gap: 2px;
+}
+.HomeContainer .miniGal .right .stack .other {
+  position: absolute;
+  right: 8em;
+  top: -2em;
+}
+.HomeContainer .miniGal .right .stack .pic1 {
+  position: absolute;
+  right: 2em;
+  top: 2em;
+}
+.HomeContainer .miniGal .right .stack .pic2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.GalleryCont {
+  padding: 2em 3em;
+  padding-top: 9em;
+}
+.GalleryCont .Carouself {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.GalleryCont .Carouself .block {
+  margin-bottom: 4em;
+  display: flex;
+  gap: 3em;
+  padding-bottom: 1.5em;
+  border-bottom: solid rgb(156, 156, 156) 1px;
+}
+.GalleryCont .Carouself .block .uno {
+  width: 75%;
+}
+.GalleryCont .Carouself .block .uno .swimage {
+  border-radius: 3px;
+  opacity: 0.7;
+  width: 100%;
+  zoom: 0;
+  cursor: pointer;
+  transition: 3s ease;
+}
+.GalleryCont .Carouself .block .dos {
+  width: 95%;
+}
+.GalleryCont .Carouself .block .dos h2 {
+  color: rgb(59, 51, 121);
+  text-shadow: 0px 5px 13px 0px rgba(255, 246, 246, 0.25);
+  font-size: 5em;
+  margin: 0;
+  text-shadow: seashell;
+}
+.GalleryCont .Carouself .block .dos p {
+  display: block;
+  width: 80%;
+  margin-bottom: 2em;
+  font-weight: lighter;
+}
+
+.AboutCont {
+  padding: 2em 3em;
+  padding-top: 9em;
+}/*# sourceMappingURL=indie.css.map */
