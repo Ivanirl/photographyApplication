@@ -16,7 +16,7 @@ function Gallery() {
     }
     let poop = options[hehe]
     const uno = document.querySelector(".uno")
-  }
+}
 
 imageRotator()
   return (
@@ -29,6 +29,7 @@ imageRotator()
             </section>
             <section className="dos">
               <h2>MAGNIFICENT</h2>
+              <section class="trois">
               <p>
                 Something about a detailed description of a set of photos. I
                 could've easily decided to go all 'loren ipsum' on your ass but
@@ -37,6 +38,7 @@ imageRotator()
                 Beacause that's just what dedicated negroes do.
               </p>
               <button>View Pictures</button>
+              </section>
             </section>
           </li>
           <li className="block">
@@ -45,6 +47,7 @@ imageRotator()
             </section>
             <section className="dos">
               <h2>MAGNIFICENT</h2>
+              <section class="trois">
               <p>
                 Something about a detailed description of a set of photos. I
                 could've easily decided to go all 'loren ipsum' on your ass but
@@ -53,6 +56,7 @@ imageRotator()
                 Beacause that's just what dedicated negroes do.
               </p>
               <button>View Pictures</button>
+              </section>
             </section>
           </li>
           <li className="block">
@@ -61,6 +65,7 @@ imageRotator()
             </section>
             <section className="dos">
               <h2>MAGNIFICENT</h2>
+              <section class="trois">
               <p>
                 Something about a detailed description of a set of photos. I
                 could've easily decided to go all 'loren ipsum' on your ass but
@@ -69,6 +74,7 @@ imageRotator()
                 Beacause that's just what dedicated negroes do.
               </p>
               <button>View Pictures</button>
+              </section>
             </section>
           </li>
         </ul>

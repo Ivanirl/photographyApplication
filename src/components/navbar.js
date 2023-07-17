@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Logo from "../Resources/Logo=hover.png";
 
@@ -23,22 +23,26 @@ function NavBar() {
     setActiveLink(value);
   };
 
-  function hm() {
-    const bar = document.querySelector(".NavBar");
+  // function hm() {
+  //   const bar = document.querySelector(".NavBar");
 
-    if (activeLink === "home") {
-      bar.id = scrolled ? "scrollo" : "";
-      console.log('home')
-    } else{
-      bar.id = scrolled ? "scrolled" : "";
-    }
+  //   if (activeLink === "home") {
+  //     //bar.id = scrolled ? "scrollo" : "";
+  //     console.log('home')
+  //   } else{
+  //     ;
+  //   }
+ //  }
 
-  }
+ const navy = useNavigate()
 
-  hm();
+ const sign = ()=>{
+  navy("/Signup")
+ }
+
 
   return (
-    <div className="NavBar" id="">
+    <div className="NavBar" id={scrolled ? "scrollo" : ""}>
       <div className="container">
         <div className="rightboy">
           <div className="logo">
@@ -83,7 +87,7 @@ function NavBar() {
 
         <div className="getstarted">
           <div className="seperator"></div>
-          <button className="getStarted">GET STARTED</button>
+          <button className="getStarted" onClick={sign}>GET STARTED</button>
         </div>
       </div>
     </div>

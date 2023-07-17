@@ -8,6 +8,7 @@ import {
 import Home from "./pages/HomePage";
 import AboutPage from "./pages/About";
 import Gallery from "./pages/Gallery";
+import SignUp from "./pages/SignUp";
 import DefaultLayout from "./components/Layout";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/" element={<Home/>}></Route>
       <Route path="/Gallery" element={<Gallery/>}></Route>
       <Route path="/About" element={<AboutPage/>}></Route>
+      <Route path="/Signup" element={<SignUp/>}></Route>
     </Routes>
   </DefaultLayout>;
 }

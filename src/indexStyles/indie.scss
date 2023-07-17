@@ -51,6 +51,7 @@ a {
 }
 
 button {
+  width: fit-content;
   font-weight: bold;
   padding: 10px 20px;
   font-size: 1em;
@@ -86,23 +87,11 @@ button {
   );
 }
 
-#scrolled {
-  background: linear-gradient(
-    180deg,
-    rgba(11, 2, 31, 0.94) 2.23%,
-    rgba(11, 2, 31, 0.96) 22.35%,
-    rgba(11, 2, 31, 0.96) 25.42%,
-    rgba(11, 2, 31, 0.9) 47.75%,
-    rgba(11, 2, 31, 0.84) 58.35%,
-    rgba(11, 2, 31, 0.76) 65.61%,
-    rgba(11, 2, 31, 0.34) 83.75%,
-    rgba(11, 2, 31, 0) 92.13%
-  );
-}
-
 .navbar-link {
 
   opacity: 0.7;
+  transition: 0.1s ease-in-out;
+
   &:hover {
     opacity: 1;
   }
@@ -112,6 +101,9 @@ button {
   opacity: 1;
   padding: 1.4px 2px;
   border-bottom: solid 3px rgb(59, 51, 121) ;
+  &:hover{
+    border-bottom: solid 3px rgb(59, 51, 121) ;
+  }
 }
 
 .NavBar {
@@ -149,6 +141,7 @@ button {
       display: flex;
       gap: 8em;
       font-weight: lighter;
+      text-shadow: 4px 3px 5px rgba(0, 0, 0, 1);
     }
 
     .getstarted {
@@ -168,6 +161,8 @@ button {
         border: none;
         transition: linear 0.2s;
         opacity: 0.7;
+        text-shadow: 4px 3px 5px rgba(0, 0, 0, 1);
+
         &:hover {
           opacity: 1;
           color: aliceblue;
@@ -199,6 +194,7 @@ button {
       //font-family: default !important;
       cursor: default;
       font-size: 7em;
+      text-shadow: 10px 10px 25px rgba(0, 0, 0, 1);
       width: 5.5em;
       letter-spacing: -5px;
       margin-bottom: 0;
@@ -302,12 +298,13 @@ button {
       flex-direction: row-reverse;
       position: absolute;
       right: 6em;
+      box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.5);
 
       img{
         width: 20em;
         border-radius: 1px;
-        border: solid 3px white;
-        box-shadow: 0px 4.4171271324157715px 4.4171271324157715px 0px rgba(0, 0, 0, 0.25);
+        border: solid 2px white;
+        box-shadow: -3px 4.4171271324157715px 4.4171271324157715px 0px rgba(0, 0, 0, 0.5);
       }
 
       .picky{
@@ -315,11 +312,14 @@ button {
         width: 25em;
         right: 0;
         top: -13em;
+        transition: 0.6s ease-in-out;
+
       }
 
       .stack {
         display: flex;
         gap: 2px;
+        transition: 0.6s ease-in-out;
         
         .other{
           position: absolute;
@@ -331,12 +331,23 @@ button {
           position: absolute;
           right: 2em;
           top: 2em;
+          transition: 0.6s ease-in-out;
+
         }
 
         .pic2{
           position: absolute;
           right: 0;
           top: 0;
+        }
+
+        &:hover{
+          .picky{
+            top: -14em;
+          }
+          .pic1{
+            top: 3em;
+          }
         }
       }
     }
@@ -345,21 +356,21 @@ button {
 
 .GalleryCont {
   padding: 2em 3em;
-  padding-top: 9em;
+  padding-top: 7.5em;
   .Carouself {
     padding: 1em;
     display: flex;
     flex-direction: column;
     .block {
-      margin-bottom: 4em;
+      margin-bottom: 7.5em;
       display: flex;
       gap: 3em;
-      padding-bottom: 1.5em;
+      padding-bottom: 3.5em;
       border-bottom: solid rgb(156, 156, 156) 1px;
       //align-items: center;
 
       .uno {
-        width: 75%;
+        width: 65%;
 
         .swimage {
           border-radius: 3px;
@@ -367,26 +378,35 @@ button {
           width: 100%;
           zoom: 0;
           cursor: pointer;
-          transition: 3s ease;
-          //&:hover{
-          //  zoom: 21;
-          //}
+          transition: 0 0.6s ease;
+          box-shadow: 7px 7px 19px rgba(0, 0, 0, 0.8);
+
+          &:hover{
+            opacity: 0.85;
+          }
         }
       }
       .dos {
-        width: 95%;
+        flex-direction: column;
+        width: 55%;
+
         h2 {
+          position: absolute;
+          right: 1.7em;
           color: rgb(59, 51, 121);
-          text-shadow: 0px 5px 13px 0px rgba(255, 246, 246, 0.25);
-          font-size: 5em;
+          text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+          font-size: 6em;
           margin: 0;
           text-shadow: seashell;
         }
-        p {
-          display: block;
-          width: 80%;
-          margin-bottom: 2em;
-          font-weight: lighter;
+        .trois{
+          margin-top: 6.6em;
+          p {
+            display: block;
+            width: 80%;
+            margin-bottom: 2em;
+            font-weight: lighter;
+          }
         }
       }
     }
@@ -396,4 +416,63 @@ button {
 .AboutCont {
   padding: 2em 3em;
   padding-top: 9em;
+}
+
+.signupCont{
+  padding: 2em 3em;
+  padding-top: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .holding{
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      background: #060013;
+      padding: 4em 0;
+      border-radius: 10px;
+      width: 40%;
+
+      .heathens{
+        margin-bottom: 4em;
+        h1{
+        margin: 0;
+        font-size: 3em;
+        margin-bottom: 10px;
+        }
+        span{
+          margin: 0;
+          font-size: 0.9em;
+          br{
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      input{
+
+        width: 60%;
+        padding: 7px 14px;
+        border: none;
+        border-radius: 3px;
+        
+        &:focus{
+          border: none;
+        }
+      }
+
+      button{
+        margin-top: 1em;
+      }
+    }
+  }
 }
