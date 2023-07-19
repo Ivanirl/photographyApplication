@@ -32,21 +32,22 @@ function NavBar() {
   //   } else{
   //     ;
   //   }
- //  }
+  //  }
 
- const navy = useNavigate()
+  const navy = useNavigate();
 
- const sign = ()=>{
-  navy("/Signup")
- }
-
+  const sign = () => {
+    navy("/Signup");
+  };
 
   return (
     <div className="NavBar" id={scrolled ? "scrollo" : ""}>
       <div className="container">
         <div className="rightboy">
           <div className="logo">
-            <img src={Logo} className="logoimage" alt="logo image" />
+            <Link to="/" onClick={() => onUpdateActiveLink("home")}>
+              <img src={Logo} className="logoimage" alt="logo image" />
+            </Link>
           </div>
           <ul className="navigation">
             <li>
@@ -75,7 +76,9 @@ function NavBar() {
               <Link
                 to="/Gallery"
                 className={
-                  activeLink === "Gallery" ? "active navbar-link" : "navbar-link"
+                  activeLink === "Gallery"
+                    ? "active navbar-link"
+                    : "navbar-link"
                 }
                 onClick={() => onUpdateActiveLink("Gallery")}
               >
@@ -87,7 +90,9 @@ function NavBar() {
 
         <div className="getstarted">
           <div className="seperator"></div>
-          <button className="getStarted" onClick={sign}>GET STARTED</button>
+          <button className="getStarted" onClick={sign}>
+            GET STARTED
+          </button>
         </div>
       </div>
     </div>
