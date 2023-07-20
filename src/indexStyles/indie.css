@@ -432,8 +432,14 @@ button:active {
   flex-direction: column;
   align-items: center;
 }
-.signupCont .container .holding {
-  border: solid 2px white;
+.signupCont .container .borderControl {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  border-radius: 10px;
+}
+.signupCont .container .borderControl .holding {
+  border: solid 1px white;
   text-align: center;
   align-items: center;
   display: flex;
@@ -442,33 +448,33 @@ button:active {
   background: #060013;
   padding: 4em 0;
   border-radius: 10px;
-  width: 40%;
+  width: 95%;
 }
-.signupCont .container .holding .heathens {
+.signupCont .container .borderControl .holding .heathens {
   margin-bottom: 4em;
 }
-.signupCont .container .holding .heathens h1 {
+.signupCont .container .borderControl .holding .heathens h1 {
   margin: 0;
   font-size: 3em;
   margin-bottom: 10px;
 }
-.signupCont .container .holding .heathens span {
+.signupCont .container .borderControl .holding .heathens span {
   margin: 0;
   font-size: 0.9em;
 }
-.signupCont .container .holding .heathens span br {
+.signupCont .container .borderControl .holding .heathens span br {
   margin: 0;
   padding: 0;
 }
-.signupCont .container .holding input {
+.signupCont .container .borderControl .holding input {
   width: 60%;
-  padding: 7px 14px;
+  padding: 10px 14px;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
 }
-.signupCont .container .holding input:focus {
+.signupCont .container .borderControl .holding input:focus {
   border: none;
 }
-.signupCont .container .holding button {
+.signupCont .container .borderControl .holding button {
   margin-top: 1em;
 }/*# sourceMappingURL=indie.css.map */

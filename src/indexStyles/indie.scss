@@ -503,50 +503,61 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .holding{
-    border: solid 2px white;
-      text-align: center;
-      align-items: center;
+    .borderControl{
       display: flex;
-      flex-direction: column;
-      gap: 17px;
-      background: #060013;
-      padding: 4em 0;
-      border-radius: 10px;
+      justify-content: center;
+      //background: hsl(259, 100%, 4%);
+      //padding: 10px;
       width: 40%;
+      border-radius: 10px;
+      //box-shadow: 7px 7px 19px rgba(0, 0, 0, 0.8);
 
-      .heathens{
-        margin-bottom: 4em;
-        h1{
-        margin: 0;
-        font-size: 3em;
-        margin-bottom: 10px;
-        }
-        span{
-          margin: 0;
-          font-size: 0.9em;
-          br{
+      .holding{
+        border: solid 1px white;
+          text-align: center;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+          background: #060013;
+          padding: 4em 0;
+          border-radius: 10px;
+          width: 95%;
+    
+          .heathens{
+            margin-bottom: 4em;
+            h1{
             margin: 0;
-            padding: 0;
+            font-size: 3em;
+            margin-bottom: 10px;
+            }
+            span{
+              margin: 0;
+              font-size: 0.9em;
+              br{
+                margin: 0;
+                padding: 0;
+              }
+            }
           }
-        }
+    
+          input{
+            //font-size: 1.1em;
+            width: 60%;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 6px;
+            
+            &:focus{
+              border: none;
+            }
+          }
+    
+          button{
+            margin-top: 1em;
+          }
       }
 
-      input{
-
-        width: 60%;
-        padding: 7px 14px;
-        border: none;
-        border-radius: 3px;
-        
-        &:focus{
-          border: none;
-        }
-      }
-
-      button{
-        margin-top: 1em;
-      }
     }
   }
 }
