@@ -433,6 +433,7 @@ button:active {
   align-items: center;
 }
 .signupCont .container .holding {
+  border: solid 2px white;
   text-align: center;
   align-items: center;
   display: flex;
