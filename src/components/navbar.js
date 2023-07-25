@@ -40,6 +40,22 @@ function NavBar() {
     navy("/Signup");
   };
 
+  // const MenuOpen = document.querySelector(".bubble-open");
+  // const MenuClose = document.querySelector(".bubble-close");
+  // const bubbleNav = document.querySelector("#nav-bubble");
+
+  // function closenavigation(){
+  //   bubbleNav.className = "closedNav"
+  // }
+  // function opennavigation(){
+  //   bubbleNav.className = "navigation"
+
+  // }
+
+  // MenuOpen.addEventListener("click", opennavigation)
+  // MenuClose.addEventListener("click", closenavigation)
+
+
   return (
     <div className="NavBar" id={scrolled ? "scrollo" : ""}>
       <div className="container">
@@ -49,7 +65,47 @@ function NavBar() {
               <img src={Logo} className="logoimage" alt="logo image" />
             </Link>
           </div>
-          <ul className="navigation">
+          <svg
+            width="49"
+            className="bubble-open"
+            height="16"
+            viewBox="0 0 49 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="49" height="3" rx="1.5" fill="#D9D9D9" />
+            <rect y="13" width="49" height="3" rx="1.5" fill="#D9D9D9" />
+          </svg>
+
+          <ul className="closedNav" id="nav-bubble">
+            <li className="bubble-close">
+              <svg
+                className="bubble-close"
+                width="49"
+                height="37"
+                viewBox="0 0 49 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="8.01123"
+                  width="49"
+                  height="3"
+                  rx="1.5"
+                  transform="rotate(42.0982 8.01123 0)"
+                  fill="#D9D9D9"
+                />
+                <rect
+                  x="6.22681"
+                  y="34.8887"
+                  width="49"
+                  height="3"
+                  rx="1.5"
+                  transform="rotate(-45.3915 6.22681 34.8887)"
+                  fill="#D9D9D9"
+                />
+              </svg>
+            </li>
             <li>
               <Link
                 to="/"

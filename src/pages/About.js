@@ -32,6 +32,7 @@ function AboutPage() {
             </div>
           </div>
         </section>
+        <section className="bighead"> doccy</section>
       </div>
     </div>
   );
