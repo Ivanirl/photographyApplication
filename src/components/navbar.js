@@ -40,20 +40,20 @@ function NavBar() {
     navy("/Signup");
   };
 
-  // const MenuOpen = document.querySelector(".bubble-open");
-  // const MenuClose = document.querySelector(".bubble-close");
-  // const bubbleNav = document.querySelector("#nav-bubble");
+  const MenuOpen = document.querySelector(".bubble-open");
+  const MenuClose = document.querySelector(".bubble-close");
+  const bubbleNav = document.querySelector("#nav-bubble");
 
-  // function closenavigation(){
-  //   bubbleNav.className = "closedNav"
-  // }
-  // function opennavigation(){
-  //   bubbleNav.className = "navigation"
+  function closenavigation(){
+    bubbleNav.className = "closedNav"
+  }
+  function opennavigation(){
+    bubbleNav.className = "navigation"
 
-  // }
+  }
 
-  // MenuOpen.addEventListener("click", opennavigation)
-  // MenuClose.addEventListener("click", closenavigation)
+  MenuOpen.addEventListener("click", opennavigation)
+  MenuClose.addEventListener("click", closenavigation)
 
 
   return (
