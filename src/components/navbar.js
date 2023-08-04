@@ -5,6 +5,7 @@ import Logo from "../Resources/Logo=hover.png";
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [menuha, setMenuha] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,37 +24,33 @@ function NavBar() {
     setActiveLink(value);
   };
 
-  // function hm() {
-  //   const bar = document.querySelector(".NavBar");
-
-  //   if (activeLink === "home") {
-  //     //bar.id = scrolled ? "scrollo" : "";
-  //     console.log('home')
-  //   } else{
-  //     ;
-  //   }
-  //  }
-
   const navy = useNavigate();
-
   const sign = () => {
     navy("/Signup");
   };
 
   // const MenuOpen = document.querySelector(".bubble-open");
-  // const MenuClose = document.querySelector(".bubble-close");
-  // const bubbleNav = document.querySelector("#nav-bubble");
+  const Menu = document.querySelectorAll(".bubble");
+  const bubbleNav = document.querySelector("#nav-bubble");
 
-  // function closenavigation(){
-  //   bubbleNav.className = "closedNav"
-  // }
-  // function opennavigation(){
-  //   bubbleNav.className = "navigation"
 
-  // }
 
-  // MenuOpen.addEventListener("click", opennavigation)
-  // MenuClose.addEventListener("click", closenavigation)
+  useEffect(() => {
+    const togglemenu = () => {
+      if (bubbleNav.className === "closedNav") {
+        setMenuha(true);
+        console.log("setmenuistrue");
+      } else if (bubbleNav.className === "navigation") {
+        setMenuha(false);
+        console.log("setmenuisfalse");
+      }
+    };
+
+    Menu.forEach((item) => {
+      item.addEventListener("click", togglemenu);
+      return () => item.removeEventListener("click", togglemenu);
+    })
+  }, []);
 
 
   return (
@@ -67,7 +64,8 @@ function NavBar() {
           </div>
           <svg
             width="49"
-            className="bubble-open"
+            className="bubble"
+            id="mens"
             height="16"
             viewBox="0 0 49 16"
             fill="none"
@@ -77,10 +75,11 @@ function NavBar() {
             <rect y="13" width="49" height="3" rx="1.5" fill="#D9D9D9" />
           </svg>
 
-          <ul className="closedNav" id="nav-bubble">
+          <ul className={menuha ? "navigation" : "closedNav"} id="nav-bubble">
             <li className="bubble-close">
               <svg
-                className="bubble-close"
+                className="bubble"
+                id="womens"
                 width="49"
                 height="37"
                 viewBox="0 0 49 37"
