@@ -51,11 +51,11 @@ a {
   text-decoration: none;
 }
 
-.bubble-open{
+#mens{
   display: none;
 }
 
-.bubble-close{
+#womens{
   display: none;
 }
 
@@ -579,7 +579,7 @@ button {
     width: 100%;
     z-index: 10000;
 
-    .bubble-open{
+    #mens{
       display: inline-block;
     }
   
@@ -630,14 +630,15 @@ button {
         flex-direction: column;
         background: #0b021f;
         padding: 2em;
+        padding-top: 0;
         height: 100%;
         width: 100%;
 
-        .bubble-close{
+        #womens{
           display: inline-block;
           position: absolute;
-          top: 11px;
-          right: 10px;
+          top: 2em;
+          right: 2em;
         }
       }
   
@@ -667,7 +668,7 @@ button {
     width: 100%;
     z-index: 10000;
 
-    .bubble-open{
+    #mens{
       display: inline-block;
     }
   
@@ -719,7 +720,7 @@ button {
         height: 100%;
         width: 100%;
 
-        .bubble-close{
+        #womens{
           display: inline-block;
           position: absolute;
           top: 11px;
