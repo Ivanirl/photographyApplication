@@ -48,11 +48,11 @@ a {
   text-decoration: none;
 }
 
-.bubble-open {
+#mens {
   display: none;
 }
 
-.bubble-close {
+#womens {
   display: none;
 }
 
@@ -363,16 +363,18 @@ button:active {
   padding: 2em 3em;
   padding-top: 6em;
 }
-.AboutCont .peter .head {
+.AboutCont .bighead {
+  padding-top: 1em;
   text-align: center;
-  margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7em;
 }
-.AboutCont .peter .head h1 {
-  display: none;
-  font-size: 38em;
-  opacity: 0.1;
-  color: #0b021f;
-  text-shadow: 2px 2px 2px rgb(202, 200, 200);
+.AboutCont .bighead .catch {
+  width: 50%;
+}
+.AboutCont .bighead .catch h1 {
+  font-size: 2.5em;
 }
 .AboutCont .peter .floater {
   display: flex;
@@ -380,30 +382,16 @@ button:active {
   justify-content: center;
 }
 .AboutCont .peter .floater .imageHolster {
-  box-shadow: 7px 7px 19px rgba(0, 0, 0, 0.8);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.8);
 }
 .AboutCont .peter .floater .imageHolster img {
   width: 20em;
   border-radius: 10px;
 }
-.AboutCont .peter .floater .imageHolster .overlay {
-  align-self: center;
-  text-align: center;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: -3.5em;
-  display: flex;
-  flex-direction: column;
-  padding: 3em 4em;
-  padding-right: 4.8em;
-  box-sizing: border-box;
-  margin: 0;
-}
 .AboutCont .peter .floater #centerbaby {
   position: absolute;
-  top: 11em;
-  z-index: 10000000;
+  top: 22em;
+  z-index: 1000;
 }
 .AboutCont .peter .floater #centerbaby img {
   width: 20em;
@@ -415,15 +403,9 @@ button:active {
   transform: rotate(-12deg);
   opacity: 0.8;
 }
-.AboutCont .peter .floater #ho .overlay {
-  display: none;
-}
 .AboutCont .peter .floater #ha {
   transform: rotate(12deg);
   opacity: 0.8;
-}
-.AboutCont .peter .floater #ha .overlay {
-  display: none;
 }
 
 .signupCont {
@@ -495,7 +477,7 @@ button:active {
     width: 100%;
     z-index: 10000;
   }
-  .NavBar .bubble-open {
+  .NavBar #mens {
     display: inline-block;
   }
   .NavBar .container {
@@ -539,14 +521,15 @@ button:active {
     flex-direction: column;
     background: #0b021f;
     padding: 2em;
+    padding-top: 0;
     height: 100%;
     width: 100%;
   }
-  .NavBar .container .navigation .bubble-close {
+  .NavBar .container .navigation #womens {
     display: inline-block;
     position: absolute;
-    top: 11px;
-    right: 10px;
+    top: 2em;
+    right: 2em;
   }
   .NavBar .container .getstarted {
     display: none;
@@ -557,6 +540,109 @@ button:active {
   .HomeContainer .miniGal .right {
     display: none;
   }
+  .AboutCont {
+    padding: 2em 3em;
+    padding-top: 6em;
+  }
+  .AboutCont .bighead {
+    padding-top: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7em;
+  }
+  .AboutCont .bighead .catch {
+    width: 80%;
+  }
+  .AboutCont .bighead .catch h1 {
+    font-size: 2.5em;
+  }
+  .AboutCont .peter .floater {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+  }
+  .AboutCont .peter .floater .imageHolster {
+    box-shadow: none;
+  }
+  .AboutCont .peter .floater .imageHolster img {
+    width: 10em;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.8);
+  }
+  .AboutCont .peter .floater #centerbaby {
+    position: absolute;
+    top: 22em;
+    z-index: 1000;
+  }
+  .AboutCont .peter .floater #centerbaby img {
+    width: 10em;
+  }
+  .AboutCont .peter .floater #centerbaby .overlay {
+    bottom: 5px;
+  }
+  .AboutCont .peter .floater #ho {
+    transform: rotate(-12deg);
+    opacity: 0.8;
+  }
+  .AboutCont .peter .floater #ha {
+    transform: rotate(12deg);
+    opacity: 0.8;
+  }
+  .GalleryCont {
+    padding: 2em 0.2em;
+    padding-top: 7.5em;
+  }
+  .GalleryCont .Carouself .block {
+    text-align: center;
+    margin-bottom: 7.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding-bottom: 3.5em;
+    border-bottom: solid rgb(156, 156, 156) 1px;
+  }
+  .GalleryCont .Carouself .block .uno {
+    width: 65%;
+  }
+  .GalleryCont .Carouself .block .uno .swimage {
+    border-radius: 3px;
+    opacity: 0.7;
+    width: 100%;
+    zoom: 0;
+    cursor: pointer;
+    transition: 0 0.6s ease;
+    box-shadow: 7px 7px 19px rgba(0, 0, 0, 0.8);
+  }
+  .GalleryCont .Carouself .block .uno .swimage:hover {
+    opacity: 0.85;
+  }
+  .GalleryCont .Carouself .block .dos {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+  }
+  .GalleryCont .Carouself .block .dos h2 {
+    position: relative;
+    right: 0;
+    color: rgb(59, 51, 121);
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    font-size: 3em;
+    margin: 0;
+    text-shadow: seashell;
+  }
+  .GalleryCont .Carouself .block .dos .trois {
+    margin-top: 1em;
+  }
+  .GalleryCont .Carouself .block .dos .trois p {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2em;
+    font-weight: lighter;
+  }
 }
 @media only screen and (max-width: 530px) {
   .NavBar {
@@ -566,7 +652,7 @@ button:active {
     width: 100%;
     z-index: 10000;
   }
-  .NavBar .bubble-open {
+  .NavBar #mens {
     display: inline-block;
   }
   .NavBar .container {
@@ -600,7 +686,6 @@ button:active {
   .NavBar .container .navigation {
     z-index: 900000000000000;
     display: flex;
-    justify-content: right;
     font-weight: lighter;
     text-shadow: 4px 3px 5px rgb(0, 0, 0);
     position: fixed;
@@ -611,12 +696,13 @@ button:active {
     padding: 2em;
     height: 100%;
     width: 100%;
+    padding-top: 0;
   }
-  .NavBar .container .navigation .bubble-close {
+  .NavBar .container .navigation #womens {
     display: inline-block;
     position: absolute;
-    top: 11px;
-    right: 10px;
+    top: 28px;
+    right: 20px;
   }
   .NavBar .container .getstarted {
     display: none;
@@ -774,5 +860,108 @@ button:active {
   }
   .HomeContainer .miniGal .right .stack:hover .pic1 {
     top: 3em;
+  }
+  .AboutCont {
+    padding: 2em 3em;
+    padding-top: 6em;
+  }
+  .AboutCont .bighead {
+    padding-top: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7em;
+  }
+  .AboutCont .bighead .catch {
+    width: 100%;
+  }
+  .AboutCont .bighead .catch h1 {
+    font-size: 2.5em;
+  }
+  .AboutCont .bighead .catch span {
+    font-size: 0.9em;
+  }
+  .AboutCont .peter .floater {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+  }
+  .AboutCont .peter .floater .imageHolster img {
+    width: 20em;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.8);
+  }
+  .AboutCont .peter .floater #centerbaby {
+    box-shadow: none;
+    position: absolute;
+    top: 25em;
+    z-index: 1000;
+    padding-bottom: 5em;
+  }
+  .AboutCont .peter .floater #centerbaby img {
+    width: 17em;
+  }
+  .AboutCont .peter .floater #centerbaby .overlay {
+    bottom: 5px;
+  }
+  .AboutCont .peter .floater #ho {
+    display: none;
+  }
+  .AboutCont .peter .floater #ha {
+    display: none;
+  }
+  .GalleryCont {
+    padding: 2em 0.2em;
+    padding-top: 7.5em;
+  }
+  .GalleryCont .Carouself .block {
+    text-align: center;
+    margin-bottom: 7.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding-bottom: 3.5em;
+    border-bottom: solid rgb(156, 156, 156) 1px;
+  }
+  .GalleryCont .Carouself .block .uno {
+    width: 65%;
+  }
+  .GalleryCont .Carouself .block .uno .swimage {
+    border-radius: 3px;
+    opacity: 0.7;
+    width: 100%;
+    zoom: 0;
+    cursor: pointer;
+    transition: 0 0.6s ease;
+    box-shadow: 7px 7px 19px rgba(0, 0, 0, 0.8);
+  }
+  .GalleryCont .Carouself .block .uno .swimage:hover {
+    opacity: 0.85;
+  }
+  .GalleryCont .Carouself .block .dos {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+  }
+  .GalleryCont .Carouself .block .dos h2 {
+    position: relative;
+    right: 0;
+    color: rgb(59, 51, 121);
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    font-size: 3em;
+    margin: 0;
+    text-shadow: seashell;
+  }
+  .GalleryCont .Carouself .block .dos .trois {
+    margin-top: 1em;
+  }
+  .GalleryCont .Carouself .block .dos .trois p {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2em;
+    font-weight: lighter;
   }
 }/*# sourceMappingURL=indie.css.map */
