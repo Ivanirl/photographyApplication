@@ -16,6 +16,29 @@
   font-weight: 300;
 }
 
+@mixin baton{
+  width: fit-content;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: solid aliceblue 2px;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    opacity: 1;
+    color: black;
+    background: aliceblue;
+  }
+  &:active {
+    opacity: 1;
+    color: white;
+    background: none;
+  }
+}
+
 * {
   font-family: "Centra", sans-serif !important;
   box-sizing: border-box;
@@ -51,12 +74,40 @@ a {
   text-decoration: none;
 }
 
-#mens{
+.mens{
   display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: fit-content;
+  &:hover {
+    opacity: 1;
+    color: white;
+    background: none;
+  }
+  &:active {
+    opacity: 1;
+    color: white;
+    background: none;
+  }
 }
 
-#womens{
+.womens{
   display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: fit-content;
+  &:hover {
+    opacity: 1;
+    color: white;
+    background: none;
+  }
+  &:active {
+    opacity: 1;
+    color: white;
+    background: none;
+  }
 }
 
 button {
@@ -562,7 +613,7 @@ button {
     width: 100%;
     z-index: 10000;
 
-    #mens{
+    .mens{
       display: inline-block;
     }
   
@@ -617,11 +668,11 @@ button {
         height: 100%;
         width: 100%;
 
-        #womens{
+        .womens{
           display: inline-block;
           position: absolute;
           top: 2em;
-          right: 2em;
+          right: 4em;
         }
       }
   
@@ -774,7 +825,7 @@ button {
     width: 100%;
     z-index: 10000;
 
-    #mens{
+    button .mens{
       display: inline-block;
     }
   
@@ -826,10 +877,10 @@ button {
         width: 100%;
         padding-top: 0;
 
-        #womens{
+        .womens{
           display: inline-block;
           position: absolute;
-          top: 28px;
+          top: 18px;
           right: 20px;
         }
       }

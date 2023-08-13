@@ -48,12 +48,42 @@ a {
   text-decoration: none;
 }
 
-#mens {
+.mens {
   display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.mens:hover {
+  opacity: 1;
+  color: white;
+  background: none;
+}
+.mens:active {
+  opacity: 1;
+  color: white;
+  background: none;
 }
 
-#womens {
+.womens {
   display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.womens:hover {
+  opacity: 1;
+  color: white;
+  background: none;
+}
+.womens:active {
+  opacity: 1;
+  color: white;
+  background: none;
 }
 
 button {
@@ -477,7 +507,7 @@ button:active {
     width: 100%;
     z-index: 10000;
   }
-  .NavBar #mens {
+  .NavBar .mens {
     display: inline-block;
   }
   .NavBar .container {
@@ -525,11 +555,11 @@ button:active {
     height: 100%;
     width: 100%;
   }
-  .NavBar .container .navigation #womens {
+  .NavBar .container .navigation .womens {
     display: inline-block;
     position: absolute;
     top: 2em;
-    right: 2em;
+    right: 4em;
   }
   .NavBar .container .getstarted {
     display: none;
@@ -652,7 +682,7 @@ button:active {
     width: 100%;
     z-index: 10000;
   }
-  .NavBar #mens {
+  .NavBar button .mens {
     display: inline-block;
   }
   .NavBar .container {
@@ -698,10 +728,10 @@ button:active {
     width: 100%;
     padding-top: 0;
   }
-  .NavBar .container .navigation #womens {
+  .NavBar .container .navigation .womens {
     display: inline-block;
     position: absolute;
-    top: 28px;
+    top: 18px;
     right: 20px;
   }
   .NavBar .container .getstarted {

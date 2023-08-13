@@ -30,28 +30,25 @@ function NavBar() {
   };
 
   // const MenuOpen = document.querySelector(".bubble-open");
-  const Menu = document.querySelectorAll(".bubble");
-  const bubbleNav = document.querySelector("#nav-bubble");
+  // const Menu = document.querySelectorAll(".bubble");
+  // const bubbleNav = document.querySelector("#nav-bubble");
 
+  // useEffect(() => {
+  //   const togglemenu = () => {
+  //     if (bubbleNav.className === "closedNav") {
+  //       setMenuha(true);
+  //       console.log("setmenuistrue");
+  //     } else if (bubbleNav.className === "navigation") {
+  //       setMenuha(false);
+  //       console.log("setmenuisfalse");
+  //     }
+  //   };
 
-
-  useEffect(() => {
-    const togglemenu = () => {
-      if (bubbleNav.className === "closedNav") {
-        setMenuha(true);
-        console.log("setmenuistrue");
-      } else if (bubbleNav.className === "navigation") {
-        setMenuha(false);
-        console.log("setmenuisfalse");
-      }
-    };
-
-    Menu.forEach((item) => {
-      item.addEventListener("click", togglemenu);
-      return () => item.removeEventListener("click", togglemenu);
-    })
-  }, []);
-
+  //   Menu.forEach((item) => {
+  //     item.addEventListener("click", togglemenu);
+  //     return () => item.removeEventListener("click", togglemenu);
+  //   })
+  // }, []);
 
   return (
     <div className="NavBar" id={scrolled ? "scrollo" : ""}>
@@ -62,48 +59,58 @@ function NavBar() {
               <img src={Logo} className="logoimage" alt="logo image" />
             </Link>
           </div>
-          <svg
-            width="49"
-            className="bubble"
-            id="mens"
-            height="16"
-            viewBox="0 0 49 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <button
+            className="mens"
+            onClick={() => {
+              setMenuha(!menuha);
+            }}
           >
-            <rect width="49" height="3" rx="1.5" fill="#D9D9D9" />
-            <rect y="13" width="49" height="3" rx="1.5" fill="#D9D9D9" />
-          </svg>
+            <svg
+              width="49"
+              height="16"
+              viewBox="0 0 49 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="49" height="3" rx="1.5" fill="#D9D9D9" />
+              <rect y="13" width="49" height="3" rx="1.5" fill="#D9D9D9" />
+            </svg>
+          </button>
 
           <ul className={menuha ? "navigation" : "closedNav"} id="nav-bubble">
             <li className="bubble-close">
-              <svg
-                className="bubble"
-                id="womens"
-                width="49"
-                height="37"
-                viewBox="0 0 49 37"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                className="womens"
+                onClick={() => {
+                  setMenuha(!menuha);
+                }}
               >
-                <rect
-                  x="8.01123"
+                <svg
                   width="49"
-                  height="3"
-                  rx="1.5"
-                  transform="rotate(42.0982 8.01123 0)"
-                  fill="#D9D9D9"
-                />
-                <rect
-                  x="6.22681"
-                  y="34.8887"
-                  width="49"
-                  height="3"
-                  rx="1.5"
-                  transform="rotate(-45.3915 6.22681 34.8887)"
-                  fill="#D9D9D9"
-                />
-              </svg>
+                  height="37"
+                  viewBox="0 0 49 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="8.01123"
+                    width="49"
+                    height="3"
+                    rx="1.5"
+                    transform="rotate(42.0982 8.01123 0)"
+                    fill="#D9D9D9"
+                  />
+                  <rect
+                    x="6.22681"
+                    y="34.8887"
+                    width="49"
+                    height="3"
+                    rx="1.5"
+                    transform="rotate(-45.3915 6.22681 34.8887)"
+                    fill="#D9D9D9"
+                  />
+                </svg>
+              </button>
             </li>
             <li>
               <Link
@@ -111,7 +118,14 @@ function NavBar() {
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("home")}
+                onClick={() => {
+                  if (window.screenX < 531) {
+                    onUpdateActiveLink("home");
+                  } else {
+                    onUpdateActiveLink("home");
+                    setMenuha(!menuha);
+                  }
+                }}
               >
                 <span>Home</span>
               </Link>
@@ -122,7 +136,14 @@ function NavBar() {
                 className={
                   activeLink === "About" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("About")}
+                onClick={() => {
+                  if (window.screenX < 531) {
+                    onUpdateActiveLink("About");
+                  } else {
+                    onUpdateActiveLink("About");
+                    setMenuha(!menuha);
+                  }
+                }}
               >
                 <span>About</span>
               </Link>
@@ -135,7 +156,14 @@ function NavBar() {
                     ? "active navbar-link"
                     : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("Gallery")}
+                onClick={() => {
+                  if (window.screenX < 531) {
+                    onUpdateActiveLink("Gallery");
+                  } else {
+                    onUpdateActiveLink("Gallery");
+                    setMenuha(!menuha);
+                  }
+                }}
               >
                 <span>Gallery</span>
               </Link>
